@@ -1,0 +1,46 @@
+
+<div class="row">
+ <div class="col-lg-2">     
+        </div>
+            <div class="col-lg-8">
+               <h3>UserList</h3>
+        </div>
+         <div class="col-lg-2">
+        </div>
+        </div>
+     <div class="row text-center">
+
+            <div class="col-md-2 col-sm-8 hero-feature">
+               
+            </div>
+<div class="col-md-8 col-sm-8 hero-feature">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Index</th>
+		    <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: left;">
+      <tr ng-repeat="x in user">
+        <td>{{$index+1}}</td>
+        <td>{{x._id}}</td>
+        <td>{{x.firstname}}</td>
+		    <td>{{x.lastname}}</td>
+        <td>{{x.address}}</td>
+        <!-- <td><input type="button" class="btn btn-success" value="view" ng-click="view(x._id)"></td>
+       <td><input type="button" class="btn btn-success" value="update" ng-click="editUser(x._id)"></td>
+       <td><input type="button" class="btn btn-success" value="delete" ng-click="deleteUser(x._id)"></td> -->
+      </tr>
+    </tbody>
+  </table>
+ </div>
+
+            <div class="col-md-2 col-sm-8 hero-feature">
+           
+            </div>
+</div>
+

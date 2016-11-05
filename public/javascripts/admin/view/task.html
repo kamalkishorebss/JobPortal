@@ -1,0 +1,154 @@
+<input type="button" name="btn" style="margin-left:850px; margin-bottom:10px;" value="see schedule" class="btn btn-circle green-haze dropdown-toggle" ng-click="seeSchedule(candUser.username)">
+
+<div class="portlet box blue-hoki">
+<div class="portlet-title">
+<div class="caption">
+<i class="fa fa-gift"></i>Create schedule
+<span style="margin-left:600px; font-size:28px;">{{candUser.username}}</span>
+</div>
+
+</div>
+<div class="portlet-body form">
+
+
+    <form id="signupform" class="form-horizontal" role="form" name="myForm" novalidate>
+     
+    
+           
+        <div class="form-body">
+
+           
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Task</label>
+                <div class="col-md-4">
+                    <textarea type="text" class="form-control" name="tasks" ng-model="tasks"></textarea> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Select-Date</label>
+                
+                    <md-content>
+                        
+                      <md-datepicker name="date" ng-model="myDate1" md-placeholder="Select-date">                 
+                           </md-datepicker>
+                                  
+                    </md-content>
+                
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Select Day</label>
+                
+                  <div class="col-md-4">
+               
+                  <select ng-model="day" name="day" class="form-control">
+                    <option value="">--select--</option>
+                    <option value="Sun">Sunday</option>
+                    <option value="Mon">Monday</option>
+                    <option value="Tue">Tuesday</option>
+                    <option value="wed">Wedensday</option>
+                    <option value="thus">Thursday</option>
+                    <option value="Fri">Friday</option>
+                    <option value="Sat">Saturday</option>
+                    </select>
+               
+            </div>
+            </div>
+            
+            <div class="form-group">             
+             <label class="col-md-3 control-label">From</label>
+             <div class="col-md-4">
+               
+                  <select ng-model="stime" name="stime" class="form-control">
+                    <option value="">00:00</option>
+                    <option value="1:00">1:00</option>
+                    <option value="2:00">2:00</option>
+                    <option value="3:00">3:00</option>
+                    <option value="4:00">4:00</option>
+                    <option value="5:00">5:00</option>
+                    <option value="6:00">6:00</option>
+                    <option value="7:00">7:00</option>
+                    <option value="8:00">8:00</option>
+                    <option value="9:00">9:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                    <option value="23:00">23:00</option>                    
+                  </select>
+                
+            </div>
+            </div>
+
+           
+            
+
+            <div class="form-group">             
+             <label class="col-md-3 control-label">To</label>
+             <div class="col-md-4">
+               <select ng-model="etime" name="etime" class="form-control">
+                 <option value="">00:00</option>
+                    <option value="1:00">1:00</option>
+                    <option value="2:00">2:00</option>
+                    <option value="3:00">3:00</option>
+                    <option value="4:00">4:00</option>
+                    <option value="5:00">5:00</option>
+                    <option value="6:00">6:00</option>
+                    <option value="7:00">7:00</option>
+                    <option value="8:00">8:00</option>
+                    <option value="9:00">9:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                    <option value="23:00">23:00</option> 
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Shift</label>
+                <div class="col-md-4">
+                <div class="xyz" style="margin-left:70px;">
+                <input type="radio"  value="IST"  name="Radios" ng-model="shift"> IST 
+                <input type="radio"  value="PST"  name="Radios" ng-model="shift"> PST
+                </div>
+            </div>
+
+           <input type="hidden" ng-model="candUser.username" name="username">
+           <input type="hidden" ng-model="candUser._id" name="userid">
+           <input type="hidden" ng-model="saveManger" name="cManger">
+          </div>
+
+        <div class="row form-actions">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" class="btn btn-success btn green" value="Submit" ng-click="saveSchedule()">
+                <!-- <a class="btn btn-success btn default" href="#/reviewlist">Cancel</a> -->
+            </div>
+        </div>
+    </form>
+    
+</div>
+
+</div>                                  
+

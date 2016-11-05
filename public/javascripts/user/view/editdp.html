@@ -1,0 +1,109 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12 ">
+          <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box green ">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i> Edit Your Profile 
+              </div>
+             
+            </div>
+            <div class="portlet-body form">
+
+              <form class="form-horizontal ng-pristine ng-valid" role="form">
+                <div class="form-body">
+
+                  
+                 
+
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Name</label>
+                    <div class="col-md-9">
+                      <input type="text" name="name" ng-model="loggedIn.firstname" class="form-control ng-pristine ng-untouched ng-valid">
+                      
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">User Name</label>
+                    <div class="col-md-9">
+                      <input type="text" name="username" ng-model="loggedIn.username" class="form-control ng-pristine ng-untouched ng-valid">
+                      
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Email Address</label>
+                    <div class="col-md-9">
+                      <input type="email" name="email" ng-model="loggedIn.email" class="form-control ng-pristine ng-untouched ng-valid">
+                      
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Address</label>
+                    <div class="col-md-9">
+                      <input type="text" name="address" ng-model="loggedIn.address" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Add child page tilte">
+                      
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">City</label>
+                    <div class="col-md-9">
+                      <input type="text" name="city" ng-model="loggedIn.city" class="form-control ng-pristine ng-untouched ng-valid">
+                      
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Nationality</label>
+                    <div class="col-md-9">
+                    <select ng-model="country" name="country" class="form-control ng-pristine ng-untouched ng-valid">
+                      <option value="">{{loggedIn.country}}</option>
+                      <option value="USA">USA</option>
+                      <option value="India">India</option>
+                      <option value="Sri-lanka">Sri-lanka</option>
+                    </select>
+                      
+                    </div>
+                  </div>
+
+                   <!-- <div class="form-group">
+                    <label class="col-md-3 control-label">Img</label>
+                    <div class="col-md-9">
+                      <input type="file" ng-model="file" class="form-control ng-pristine ng-untouched ng-valid" ">
+                      
+                    </div>
+                  </div> -->
+                                
+
+                  
+                  
+
+                 
+              </div>
+
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" ng-click="editSaveuser(loggedIn._id)" value="submit" class="btn green">
+                   
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+         
+       </div>
+       </div>
+       </div>
+
+
+       <style type="text/css">
+         .col-md-12 {
+    margin-left: 120px;
+    width: 80%;
+}
+       </style>

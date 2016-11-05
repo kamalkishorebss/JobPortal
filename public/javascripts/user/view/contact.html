@@ -1,0 +1,67 @@
+   <div class="container">
+    <div class="row">
+                
+                <div class="col-md-9 col-sm-9">
+                  <h2>Contact Form</h2>
+                  <p>Lorem ipsum dolor sit amet, Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat consectetuer adipiscing elit, sed diam nonummy nibh euismod tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                  
+                  <!-- BEGIN FORM-->
+                  <form role="form" name="myForm" novalidate="">
+                    <div class="form-group">
+                      <label for="contacts-name">Name*</label>
+                      <input type="text" id="contacts-name" class="form-control" name="name" ng-model="name" ng-required="true">
+                      <span style="color:red" ng-show="myForm.firstname.$touched && myForm.firstname.$invalid">The Name is required.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="contacts-email">Email*</label>
+                      <input type="email" id="contacts-email" class="form-control" name="email" ng-model="email" ng-required="true"> 
+                      <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">The Email is required.</span>
+                      <span style="color:red" ng-show="myForm.email.$error.email">The Email is invalid.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="contacts-message">Message*</label>
+                      <textarea id="contacts-message" rows="5" class="form-control" name="message" ng-model="message" ng-required="true"></textarea>
+                      <span style="color:red" ng-show="myForm.firstname.$touched && myForm.firstname.$invalid">The FirstName is required.</span>
+                    </div>
+
+                    
+
+                    <button class="btn btn-primary" type="submit" ng-disabled="myForm.$invalid" ng-click="contact()"><i class="icon-ok"></i> Send</button>
+                    <button class="btn btn-default" type="button">Cancel</button>
+                  </form>
+                  <!-- END FORM-->
+                </div>
+
+                <div class="col-md-3 col-sm-3 sidebar2">
+                  <h2>Our Contacts</h2>
+                  <address>
+                    <strong>Loop, Inc.</strong><br>
+                    795 Park Ave, Suite 120<br>
+                    San Francisco, CA 94107<br>
+                    <abbr title="Phone">P:</abbr> (234) 145-1810
+                  </address>
+                  <address>
+                    <strong>Email</strong><br>
+                    <a href="mailto:info@email.com">info@email.com</a><br>
+                    <a href="mailto:support@example.com">support@example.com</a>
+                  </address>
+                  <ul class="social-icons margin-bottom-40">
+                    <li><a class="facebook" data-original-title="facebook" href="javascript:;"></a></li>
+                    <li><a class="github" data-original-title="github" href="javascript:;"></a></li>
+                    <li><a class="googleplus" data-original-title="Goole Plus" href="javascript:;"></a></li>
+                    <li><a class="linkedin" data-original-title="linkedin" href="javascript:;"></a></li>
+                    <li><a class="rss" data-original-title="rss" href="javascript:;"></a></li>
+                  </ul>
+
+                        
+                </div>
+     </div>
+    </div> 
+    <style type="text/css">
+      .col-md-9 {
+            margin-bottom: 20px;
+            width: 75%;
+         }
+    </style>

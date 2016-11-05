@@ -1,0 +1,208 @@
+<!--//////////////////////////////////////////////////////////////////////////////////////// -->
+<div class="container">
+<div class="forntjobs">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+            <h1>Job Page</h1>
+            
+            <div class="content-page">
+              <div class="row">
+
+
+                <!-- BEGIN LEFT SIDEBAR -->            
+                <div class="col-md-9 col-sm-9 blog-posts">
+                   
+                   <div class="row">
+                    <label class="col-md-3 control-label">Search jobs</label>
+                    <div class="col-md-6">
+                        <input type="text" ng-model="search" class="form-control" placeholder="Search...">
+                    </div>
+
+                    <div class="col-md-12 col-sm-12" ng-repeat="j in bjj | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter: search">
+                    
+                      <h2><a href="#/previewjob" ng-click="jobPreview(j._id)">{{j.title | myFormat}}</a></h2>
+                      
+                      <ul class="blog-info">
+                        <li><i class="fa fa-name"></i><h3><b>{{j.company_id}}</b></h3></li><br>
+                        <li><i class="fa fa-comments"></i>6</li>
+                        <li><i class="fa fa-tags"></i> {{j.location}}</li><br>
+                        <li><p  ng-bind-html="j.description"></p></li><br>
+                      <li><i class="fa fa-calendar"></i><b>LastUpdate:{{j.updated_at |date}}</b></li>
+                      </ul>
+                      <!-- <p>{{j.description}}</p>
+                      <p><i class="fa fa-calendar"></i><b>LastUpdate:17/11/2016</b></p> -->
+                      <hr class="blog-post-sep">
+                    </div>
+
+                  </div>
+                  
+                   <pagination class="blog-info" page="currentPage" max-size="noOfpages" total-items="totalItems" items-per-page="6">
+                   </pagination>       
+           
+                  <!-- <ul class="pagination">
+                    <li><a href="javascript:;">Prev</a></li>
+                    <li><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li class="active"><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li><a href="javascript:;">Next</a></li>
+                  </ul>     -->           
+                </div>
+                <!-- END LEFT SIDEBAR -->
+
+                <!-- BEGIN RIGHT SIDEBAR -->            
+                <div class="col-md-3 col-sm-3 blog-sidebar">
+                  <!-- CATEGORIES START -->
+                  <h2 class="no-top-space">Categories</h2>
+                  <ul class="nav sidebar-categories margin-bottom-40">
+                    <li><a href="javascript:;">London (18)</a></li>
+                    <li><a href="javascript:;">Moscow (5)</a></li>
+                    <li class="active"><a href="javascript:;">Paris (12)</a></li>
+                    <li><a href="javascript:;">Berlin (7)</a></li>
+                    <li><a href="javascript:;">Istanbul (3)</a></li>
+                  </ul>
+                  <!-- CATEGORIES END -->
+
+                  <!-- BEGIN RECENT NEWS -->                            
+                  <h2>Recent News</h2>
+                  <div class="recent-news margin-bottom-10">
+                    <div class="row margin-bottom-10">
+                      <div class="col-md-3">
+                        <img src="../../assets/frontend/pages/img/people/img2-large.jpg" alt="" class="img-responsive">                        
+                      </div>
+                      <div class="col-md-9 recent-news-inner">
+                        <h3><a href="javascript:;">Letiusto gnissimos</a></h3>
+                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                      </div>                        
+                    </div>
+                    <div class="row margin-bottom-10">
+                      <div class="col-md-3">
+                        <img src="../../assets/frontend/pages/img/people/img1-large.jpg" alt="" class="img-responsive">                        
+                      </div>
+                      <div class="col-md-9 recent-news-inner">
+                        <h3><a href="javascript:;">Deiusto anissimos</a></h3>
+                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                      </div>                        
+                    </div>
+                    <div class="row margin-bottom-10">
+                      <div class="col-md-3">
+                        <img src="../../assets/frontend/pages/img/people/img3-large.jpg" alt="" class="img-responsive">                        
+                      </div>
+                      <div class="col-md-9 recent-news-inner">
+                        <h3><a href="javascript:;">Tesiusto baissimos</a></h3>
+                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                      </div>                        
+                    </div>
+                  </div>
+                  <!-- END RECENT NEWS -->                            
+
+                  <!-- BEGIN BLOG TALKS -->
+                  <div class="blog-talks margin-bottom-30">
+                    <h2>Popular Talks</h2>
+                    <div class="tab-style-1">
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-1" data-toggle="tab">Multipurpose</a></li>
+                        <li><a href="#tab-2" data-toggle="tab">Documented</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane row-fluid fade in active" id="tab-1">
+                          <p class="margin-bottom-10">Raw denim you probably haven't heard of them jean shorts Austin. eu banh mi, qui irure terry richardson ex squid Aliquip placeat salvia cillum iphone.</p>
+                          <p><a href="javascript:;" class="more">Read more</a></p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-2">
+                          <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. aliquip jean shorts ullamco ad vinyl aesthetic magna delectus mollit. Keytar helvetica VHS salvia..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                            
+                  <!-- END BLOG TALKS -->
+
+                  <!-- BEGIN BLOG PHOTOS STREAM -->
+                  <div class="blog-photo-stream margin-bottom-20">
+                    <h2>Photos Stream</h2>
+                    <ul class="list-unstyled">
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/people/img5-small.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/works/img1.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/people/img4-large.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/works/img6.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/pics/img1-large.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/pics/img2-large.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/works/img3.jpg" alt=""></a></li>
+                      <li><a href="javascript:;"><img src="../../assets/frontend/pages/img/people/img2-large.jpg" alt=""></a></li>
+                    </ul>                    
+                  </div>
+                  <!-- END BLOG PHOTOS STREAM -->
+
+                  <!-- BEGIN BLOG TAGS -->
+                  <!-- <div class="blog-tags margin-bottom-20">
+                    <h2>Tags</h2>
+                    <ul>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>OS</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Metronic</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Dell</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Conquer</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>MS</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Google</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Keenthemes</a></li>
+                      <li><a href="javascript:;"><i class="fa fa-tags"></i>Twitter</a></li>
+                    </ul>
+                  </div> -->
+                  <!-- END BLOG TAGS -->
+                </div>
+                <!-- END RIGHT SIDEBAR -->            
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+
+<style type="text/css">
+  .control-label {
+    margin-top: 8px;
+     font-size:24px;
+    
+}
+</style>
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+    <!-- <div class="col-md-6">
+     
+       <ul style="list-style-type: none;">
+         <li>
+		   <div class="row text-center">
+			   <div  class="col-md-12 " ng-repeat="j in bj">
+	                <div class="thumbnail">								
+	                    <div class="caption">
+	                        <h2 style="float:left;">{{j.title}}</h2>		
+		                           <div class="row">
+			                           <div class= "col-md-12">
+				                           <p >{{j.description}}</p>
+				                       </div>
+			                       </div>
+		                       <p style="margin-top:50px;">
+		                        <a  class="btn btn-success">Apply</a>
+		                       </p>
+						 </div>
+	                </div>
+				    </div>
+		            
+              </div>
+         <li>
+      <ul>
+    </div> -->
+
+
+
+   
+ 
+
+
+
+     

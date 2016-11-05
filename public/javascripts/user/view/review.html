@@ -1,0 +1,58 @@
+   <div class="container">
+    <div class="row">
+                
+                <div class="col-md-9 col-sm-9">
+                  <h2>Your Review</h2>
+                  
+                  <!-- BEGIN FORM-->
+                  <form role="form" name="myForm" novalidate="" ng-hide = "!checkuser">
+                    <div class="form-group">
+                      <label for="contacts-message"></label>
+                      <textarea id="contacts-message" rows="4" class="form-control" name="review" ng-model="review" ng-required="true"></textarea>
+                      <span style="color:red" ng-show="myForm.review.$touched && myForm.review.$invalid">Your view is required for the post.</span>            
+                    </div>
+
+                     <input type="hidden" name="user_id"  ng-model="loggedIn._id">
+                     <input type="hidden" name="username" ng-model="loggedIn.username">
+                     <input type="hidden" name="photo"    ng-model="loggedIn.file">
+
+                    <button class="btn btn-primary" type="submit" ng-disabled="myForm.$invalid" ng-click="postReview()"><i class="icon-ok"></i> POST</button>
+                    
+                    
+                  </form>
+                  <!-- END FORM-->
+
+         </div>
+            
+    </div>
+      <hr>
+    
+</div>
+<div class="container">
+  <div class="row">
+    <h1>Comments:</h1>  
+    {{rv}}       
+    <div class="col-md-9 col-sm-9">
+     <ul ng-repeat="rv in reviews">
+     <!--  <li><img  ng-src="/userdp/{{loggedIn.file}}" class="img-circle img-responsive" style="width:100px; height:80px;"></li> -->
+      <li><b><big>{{rv.uname}}</big></b></li>
+      <li  style="margin-top:15px;">{{rv.reviews}}</li>
+      <li  style="margin-top:15px;">{{rv.created_at}}</li>
+      <hr>
+     </ul>
+    </div>
+          
+  </div>
+    
+    
+</div>
+    <style type="text/css">
+      .col-md-9 {
+            margin-bottom: 20px;
+            width: 75%;
+         }
+         ul {
+  list-style-type: none;
+}
+
+    </style>

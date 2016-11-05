@@ -1,0 +1,155 @@
+<div class="main">
+      <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="javascript:;">Pages</a></li>
+            <li class="active">Create new account</li>
+        </ul>
+        <!-- BEGIN SIDEBAR & CONTENT -->
+        <div class="row margin-bottom-40">
+          <!-- BEGIN SIDEBAR -->
+          <div class="sidebar col-md-3 col-sm-3">
+            <ul class="list-group margin-bottom-25 sidebar-menu">
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Login/Register</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Restore Password</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> My account</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Address book</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Wish list</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Returns</a></li>
+              <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Newsletter</a></li>
+            </ul>
+          </div>
+          <!-- END SIDEBAR -->
+
+          <!-- BEGIN CONTENT -->
+          <div class="col-md-9 col-sm-9">
+            <h1>Create an account</h1>
+            <div class="content-form-page">
+              <div class="row">
+                <div class="col-md-7 col-sm-7">
+                  <form class="form-horizontal" role="form" name="myForm">
+                    <fieldset>
+                      <legend>Your personal details</legend>
+                      <div class="form-group">
+                        <label for="firstname" class="col-md-3 control-label">Name <span class="require">*</span></label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="firstname" name="firstname" ng-model="firstname" ng-required="true">
+                          <span style="color:red" ng-show="myForm.firstname.$touched && myForm.firstname.$invalid">The FirstName is required.</span>
+                        </div>
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">Email <span class="require">*</span></label>
+                        <div class="col-md-9">
+                          <input type="email" class="form-control" id="email" name ="email"
+                          ng-model="email" ng-required="true">
+                          <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">The Email is required.</span>
+                          <span style="color:red" ng-show="myForm.email.$error.email">The Email is invalid.</span>
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="address" class="col-md-3 control-label">Address <span class="require">*</span></label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="address" name="address" ng-model="address" ng-required="true">
+                          <span style="color:red" ng-show="myForm.address.$touched && myForm.address.$invalid">The Address is required.</span>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="city" class="col-md-3 control-label">City/Town <span class="require">*</span></label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="city" ng-model="city" name="city" ng-required="true">
+                          <span style="color:red" ng-show="myForm.city.$touched && myForm.city.$invalid">The City is required.</span>
+                        </div>
+                        </div>
+
+
+                        <div class="form-group">
+                        <label for="country" class="col-md-3  control-label">Country <span class="require">*</span></label>
+                        <div class="col-md-9">
+                          <select ng-model="country" name="country" class="form-control">
+                            <option value="">India</option>
+                            <option value="USA">USA</option>
+                            <option value="India">India</option>
+                            <option value="Sri-lanka">Sri-lanka</option>
+                          </select>
+                          <span style="color:red" ng-show="myForm.country.$touched && myForm.country.$invalid">The Country is required.</span>
+                        </div> 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="name" class="col-md-3 control-label">Upload-File<span class="require">*</span></label>
+                            <div class="col-md-9">
+                            <input type="file" name="file" file-model="file" class="form-control">
+                        </div>
+                    </div> 
+
+        </fieldset>
+  
+                    
+
+        <fieldset>
+          <legend>Your password</legend>
+
+                <div class="form-group">
+                  <label for="password" class="col-md-3 control-label">Username <span class="require">*</span></label>
+                  <div class="col-md-9">
+                    <input type="username" class="form-control" id="username" name="username" ng-model="username" ng-required="true">
+                    <span style="color:red" ng-show="myForm.username.$touched && myForm.username.$invalid">The Username is required.</span>
+                  </div>
+                </div>
+
+
+               <div class="form-group">
+                  <label for="password" class="col-md-3 control-label">Password</label>
+                      <div class="col-md-9">
+                        <input type="password" class="form-control" ng-model="password" name="password" placeholder="Password" ng-minlength="6" ng-required="true">
+                      </div>
+                      <span style="color:red;" ng-show="myForm.password.$dirty && myForm.password.$error.required">Input field required</span>
+                     <span style="color:red;" ng-show="myForm.password.$error.minlength">Char atlest 6 digit.</span>
+               </div>
+                
+               <div class="form-group">
+                  <label for="icode" class="col-md-3 control-label">Confirm Password</label>
+                   <div class="col-md-9">
+                     <input type="password" class="form-control" ng-model="repassword" name="repassword" compare-to="password" placeholder="Confirm Password" ng-required="true">
+                   </div>
+    
+                  <div class="msg-block" ng-messages="myForm.repassword.$error"> 
+                  <div style="color:red;" ng-message="compareTo">Passwords don't match.</div> 
+                    </div>
+
+               </div>
+
+                      
+
+                    </fieldset>
+                    
+                    <div class="row">
+                      <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">                        
+                        <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid" ng-click="addUser()">Create an account</button>
+                        
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-4 col-sm-4 pull-right">
+                  <div class="form-info">
+                    <h2><em>Important</em> Information</h2>
+                    <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed sit nonumy nibh sed euismod ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo quat.</p>
+
+                    <p>Duis autem vel eum iriure at dolor vulputate velit esse vel molestie at dolore.</p>
+
+                    <!-- <button type="button" class="btn btn-default">More details</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <!-- END SIDEBAR & CONTENT -->
+      </div>
+    </div>

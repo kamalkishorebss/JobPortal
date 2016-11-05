@@ -1,0 +1,625 @@
+ <div class="portlet box blue-hoki">
+<div class="portlet-title">
+<div class="caption">
+<i class="fa fa-gift"></i>Job Detail
+</div>
+
+</div>
+<div class="portlet-body form">
+
+
+    <form  class="form-horizontal" role="form" name="myForm" novalidate>
+        
+        <div class="form-body">
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Title</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="title" ng-model="title" style="margin-top:10px;">
+                   
+                </div>
+            </div>
+             
+            <div class="form-group">
+                <label class="col-md-3 control-label">Catagories</label>
+                <div class="col-md-4">
+                   <select class="form-control" ng-model="catagories" name="catagories">
+                   <option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --Select catagory--</option>
+                    <option value="{{c.catagories}}" name="catagories"  ng-repeat="c in catlists">{{c.catagories}}</option>
+                       
+                      </select>
+                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Age</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="age" ng-model="age">
+                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Experience</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="experience" ng-model="experience">
+                
+                </div>
+            </div>
+                    
+                          
+            <div class="form-group">
+                <label class="col-md-3 control-label">Address</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="address" ng-model="address">
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Location</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="location" ng-model="location">
+                    
+
+                </div>
+            </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">Salary</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="salary" ng-model="salary">
+                </div>
+            </div> 
+
+             <div class="form-group">
+                <label class="col-md-3 control-label">Qualification</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" name="qualification" ng-model="qualification">
+                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Description</label>
+                <div class="col-md-4">
+                    <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ></div>
+                    
+
+                </div>
+            </div>         
+                  
+          <input type="hidden" name="companyManger" ng-model="$scope.manger"> 
+          <input type="hidden" name="companyemail" ng-model="$scope.companyemail"> 
+      </div>
+
+        
+    </form>
+    
+</div>
+</div>   
+<style type="text/css">
+    .ta-editor {
+  min-height: 200px;
+
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}
+</style>
+ <!-- end of Job Detail -->
+
+
+
+
+
+
+<!-- text area form -->
+  <div class="portlet-body form"  style="display:none;">
+          <form name="bookingform" id="bookingform" action="" method="post" class="form-horizontal">         
+              <div class='row'>
+
+              
+
+              <textarea  name="formcotent" id="formcotent" ng-model="formcotent">         
+              </textarea>
+              <input type ="hidden" name="company_id" ng-model="company_id">
+              
+
+              </div>
+              
+              <div class="form-actions">
+                    <div class="row">                                                           
+                      <input type="button" class="btn btn-circle blue widthSetAdmin" value="Save Form" id="updateform" onclick="updateformT()"> 
+                       
+                    </div>
+              </div>
+          </form>
+  </div>
+  <!-- end text area form form -->
+
+
+  
+<!-- create new field form -->
+  <div class="tab-content" style="width:48%;float:left;">
+  <div class="tab-pane active" id="tab_0">
+  <div class="portlet box green">
+    
+    <div class="portlet-title">
+            <div class="caption">
+            <i class="fa fa-gift"></i>Add New Fields
+            </div>
+            
+            <div class="tools">
+            <a href="javascript:;" class="collapse">
+            </a>                                      
+            </div>
+    </div>
+    
+<div class="portlet-body form " id="new_attr" class="tab-content">
+  <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+  
+            <div class="form-body" id="stepsoptionval">
+            </div>
+            
+            <div class="form-body" id="addafter">
+            
+            </div>
+            <div class="form-body ">            
+                  <label class="control-label">Label :<b></b></label>                  
+                  <input type="text" class="form-control input-circle" placeholder="Enter Your Label" name="label" id="label">           
+            </div>
+            <div class="form-body " >            
+                    <label class="control-label">Name :</label>                    
+                    <input type="text" class="form-control input-circle" placeholder="Enter Your Name"  name="input_name" id="input_name">              
+            </div>
+            <div class="form-body ">            
+                    <label class="control-label">Select Input Type :</label>            
+                    <select name="type" id="type" onChange="updateoption(this.value)" class="form-control input-circle">
+                          <option  value=''>Select Input type</option>
+                          <option  value='text'>Text Box</option>
+                          <option  value='textarea'>Textarea</option>
+                          <option  value='radio'>Radio Button</option>
+                          <option  value='checkbox'>Check Box</option>
+                          <option  value='selectbox'>Select Box</option>
+                          <option  value='file'>Upload File</option>
+                    </select>           
+            </div>
+
+            <div class="form-body " id="optionsecion">            
+                  <label class="control-label">Option :</label>            
+                  <input type="text" class="form-control input-circle" placeholder="Enter Your option"  name="option" id="option"><br>"," Seprated like: Yes,No         
+            </div> 
+
+            <div class="form-body " id="optionsecion">            
+                <label class="control-label">Css Class Name :</label>            
+                <input type="text" class="form-control input-circle" placeholder="Enter Class Name"  name="classname" id="classname">          
+            </div>
+            
+            
+            <div class="form-body " >            
+                  <label class="control-label">Is Required :</label>            
+                  <input type="radio" name="is_required"  value="true"  class="form-control input-circle">Yes
+                  <input type="radio" name="is_required" value="false"  class="form-control input-circle"> NO
+            
+            </div>
+
+            <div class='row' id="addafter">     
+            </div>
+            
+            <div class="form-actions">
+                      <div class="row">                                                                    
+                      <input type="button" class="btn btn-circle blue" value="Create" id="create" onClick="createfield()" />                     
+                      </div>
+            </div>
+
+  </form>
+  </div> 
+  
+  
+  </div>
+  </div>
+  </div>
+<!--end of create new field form -->
+  
+<!-- applications form --> 
+  <div class="tab-content" id="formattributs" style="width:48%;float:right;">
+    <div class="tab-pane active" id="tab_0">
+      <div class="portlet box green">
+            <div class="portlet-title">
+
+            <div class="caption">
+            <i class="fa fa-gift"></i>Application Form
+            </div>
+
+            <div class="tools">
+            <a href="javascript:void(0);" class="collapse">
+            </a>                                      
+            </div>                  
+           </div>          
+          </div>
+
+
+  <div class="form-group" id="formattributcontent">
+  
+    <div id="step-1" class="steps">
+    <div id="step-1-firstname" class="row">
+    <label><b>First Name</b><span>*</span></label>
+    <input type="text" id="step-1-firstname" name="firstname" class="form-control" value="" required><span onclick="delrow('step-1-firstname')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-2-lastname" class="row">
+    <label><b>Last Name</b><span>*</span></label>
+    <input type="text" id="step-2-lastname" name="lastname" class="form-control" value="" required>
+    <span onclick="delrow('step-2-lastname')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-3-email address" class="row">
+    <label><b>Email Address</b><span>*</span></label>
+    <input type="email" id="step-3-email address" name="email" class="form-control" value="" required>
+    <span onclick="delrow('step-3-email address')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-4-Current Address" class="row">
+    <label><b>Current Address</b><span>*</span></label>
+    <input type="text" id="step-4-Current Address" name="address" class="form-control" value="" required>
+    <span onclick="delrow('step-4-Current Address')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-5-Phone Number" class="row">
+    <label><b>Phone Number</b><span>*</span></label>
+    <input type="text" id="step-5-Phone Number" name="phone" class="form-control" value="" required>
+    <span onclick="delrow('Phone Number')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-6-D-O-B" class="row">
+    <label><b>D-O-B</b><span>*</span></label>
+    <input type="date" id="step-6-D-O-B" name="date" class="form-control" value="" required>
+    <span onclick="delrow('step-6-D-O-B')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-7-Matrial Status" class="row">
+    <label><b>Matrial Status</b><span>*</span></label>
+    <input type="text" id="step-7-Matrial Status" name="matrial" class="form-control" value="" required>
+    <span onclick="delrow('step-7-Matrial Status')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-8-Qualification" class="row">
+    <label><b>Qualification</b><span>*</span></label>
+    <input type="text" id="step-8-Qualification" name="qualification" class="form-control" value="" required>
+    <span onclick="delrow('step-8-Qualification')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-9-Expected-salary" class="row">
+    <label><b>Expected-salary</b><span>*</span></label>
+    <input type="text" id="step-9-Expected-salary"  name="salary" class="form-control" value="" required><span onclick="delrow('step-9-Expected-salary')" class="delformrow">Del</span>
+    </div>
+
+    <div id="step-10-Gender" class="row">
+    <label><b>Gender</b><span>*</span></label>
+    <input type="radio" name="gender" class="gender required" value="Male" class="form-control" required >M
+    <input type="radio" name="gender" class="gender required" value="Female" class="form-control" required>F
+    <span onclick="delrow('step-10-Gender')" class="delformrow">Del</span></div>
+
+    <!-- <div class="step-heading">step-1</div> -->
+    
+  </div>
+
+
+  </div>
+</div>
+ 
+ <!-- applications form -->  
+  
+
+
+
+  <input type="button" class="btn btn-circle blue" value="Save Form" ng-click="addJob()">
+  <a href="javascript:void(0)" onClick="addnewstep();">Add New Step</a>
+
+  </div>
+  
+  
+  
+
+  
+  
+ 
+  
+  
+  <script>
+ 
+ $( document ).ready(function() {
+     updateaddfetr();
+});
+  function updateformT(){
+  
+  
+  $("#formattributcontent .delformrow" ).each(function() {
+  
+  $( this ).remove();
+  })
+  
+  $("#formattributcontent .step-heading" ).each(function() {
+  
+  $( this ).remove();
+  })
+  
+  
+  //$('#number_steps').val($( "#formattributcontent .steps" ).length);
+  var contenthtml1 =  $('#formattributcontent').html();
+  $('#formcotent').val(contenthtml1);
+
+  $( "#bookingform" ).submit();
+  
+  }
+  
+    
+  function updateoption(value){
+  if(value!='text' && value!='textarea'){
+  $('#optionsecion').show();
+  }else{
+  $('#optionsecion').hide();
+  $('#option').val('');
+  }
+  }
+  
+  
+  
+  
+  function createfield()
+  {
+  var formstep = $('#formstep').val();
+  var intype = $('#type').val(); 
+  
+  var addafterme = $('#addafterme').val();
+  var optionvalue = $('#option').val();
+  var optionvaluearray = optionvalue.split(',');
+  var rowid = $('#label').val().replace(' ','-');
+  var input_name = reformatid($('#input_name').val());
+  var classname = reformatid($('#classname').val());
+  var is_required = $("input[name=is_required]:checked").val();
+  
+  if(intype!='' && rowid !='' && input_name !=''){
+  
+  var inputclass=classname;
+  var requredlabel ='';
+  if(is_required == 'true'){
+  inputclass = inputclass+" required";
+  requredlabel = "<span>*</span>";
+  
+  }
+  
+  if(intype =='radio'){
+  if(optionvalue == ''){
+  alert('Please enter option');
+  die;
+  }
+  var inputcontent=''
+  for(var j=0;j<optionvaluearray.length;j++){
+  inputcontent = inputcontent+"<input class='"+inputclass+"' type='radio' name='"+input_name+"[]'  value='"+optionvaluearray[j]+"'>"+optionvaluearray[j];
+  }
+  inputcontent = '<div class="right-inout">'+inputcontent+'</div>';
+  }  
+  
+  if(intype =='checkbox'){
+  if(optionvalue == ''){
+  alert('Please enter option');
+  die;
+  }
+  var inputcontent=''
+  for(var j=0;j<optionvaluearray.length;j++){
+  inputcontent = inputcontent+"<input class='"+inputclass+"' type='checkbox' name='"+input_name+"[]'  value='"+optionvaluearray[j]+"'>"+optionvaluearray[j];
+  }
+  
+  inputcontent = '<div class="right-inout">'+inputcontent+'</div>';
+  }
+  
+  if(intype =='selectbox'){
+  if(optionvalue == ''){
+  alert('Please enter option');
+  die;
+  }
+  var inputcontent="<select class='"+inputclass+"' name='"+input_name+"'><option value=''>Select One</option>";
+  for(var j=0;j<optionvaluearray.length;j++){
+  inputcontent = inputcontent+"<option  value='"+optionvaluearray[j]+"'>"+optionvaluearray[j]+"</option>";
+  }
+  inputcontent=inputcontent +"</select>";
+  }
+  
+  if(intype =='text'){
+  var inputcontent = "<input class='"+inputclass+"' type='text' name='"+input_name+"' id='"+reformatid(formstep+"-"+$('#label').val())+"'>";
+  }
+  
+  if(intype =='textarea'){
+  var inputcontent = "<textarea class='"+inputclass+"' name='"+input_name+"' id='"+reformatid(formstep+"-"+$('#label').val())+"'></textarea>";
+  }
+  
+
+
+
+    if(intype =='file'){
+  var inputcontent = "<input class='"+inputclass+"' type='file' name='"+input_name+"' id='"+reformatid(formstep+"-"+$('#label').val())+"'>";
+  }
+  
+
+
+
+  if(addafterme == 0){
+  $( "#"+formstep ).append( "<div class='row' id='"+reformatid(formstep+"-"+rowid)+"'><label>"+$('#label').val()+requredlabel+"</label>"+inputcontent+"</div>" );
+  //alert(html1);
+  }else{ 
+  $("<div class='row' id='"+reformatid(formstep+"-"+rowid)+"'><label>"+$('#label').val()+requredlabel+"</label>"+inputcontent+"</div>").insertAfter("#"+addafterme);
+  }
+  
+  
+  updateaddfetr();
+  }
+  }
+  
+  
+  function reformatid(stringid){
+  var newstringid = stringid.replace(/\s/g, "-");
+  return newstringid.toLowerCase();
+  }
+  
+  
+  function delrow(rowid){
+  $('#'+rowid).remove();
+  }
+  
+  function addnewstep(){
+  
+  var newstep = parseInt($( "#formattributcontent .steps" ).length)+1;
+  $( "#formattributcontent" ).append('<div class="steps" id="step-'+newstep+'"></div>');
+  updateaddfetr();
+  
+  }
+  function updateaddfetr2(){
+  
+  var optionval ='<option value="0">Select</option>';
+  var formstep = $('#formstep').val();
+  //alert(formstep);
+  $( "#"+formstep+" .row" ).each(function() {
+  optionval = optionval+'<option value="'+this.id+'">'+this.id+'</option>';
+  $("#"+this.id).find('.delformrow').remove();
+  $("#"+this.id ).append( "<span class='delformrow' onClick=delrow('"+this.id+"')>Del</span>" );
+  
+  
+  })
+  var addafterhtml = "<label class='control-label'>Add After</label><select id='addafterme'>"+optionval+"</select>"
+  
+  $('#addafter').html(addafterhtml);
+  
+  }
+  function updateaddfetr(){
+  
+  
+  var tsteps =$( "#formattributcontent .steps" ).length;
+  
+  if(tsteps == 0){
+  
+  $( "#formattributcontent" ).append('<div class="steps" id="step-1"></div>');
+  $( "#step-1" ).prepend('<div class="step-heading">step-1</div>');
+  var stepsoptionval ='<option value="step-1">Step 1</option>';
+  }else{
+  var stepsoptionval ='';
+  $( "#formattributcontent .steps" ).each(function() {
+  $(this).find('.step-heading').remove();
+  $( this ).prepend( '<div class="step-heading">'+this.id+'</div>' );
+  stepsoptionval = stepsoptionval+'<option value="'+this.id+'">'+this.id+'</option>';
+  
+  })
+  }
+ 
+  var stepsoptionvalhtml = "<label class='control-label'>Form Step</label><select class='form-control input-circle' onChange='updateaddfetr2()' id='formstep'>"+stepsoptionval+"</select>";
+  $('#stepsoptionval').html(stepsoptionvalhtml);
+  
+  var optionval ='<option value="0">Select</option>';
+  var formstep = $('#formstep').val();
+ 
+  $( "#formattributcontent .steps .row" ).each(function() {
+  optionval = optionval+'<option value="'+this.id+'">'+this.id+'</option>';
+  $("#"+this.id).find('.delformrow').remove();
+  $("#"+this.id ).append( "<span class='delformrow' onClick=delrow('"+this.id+"')>Del</span>" );
+  
+  
+  })
+  var addafterhtml = "<label class='control-label'>Add After</label><select class='form-control input-circle'  id='addafterme'>"+optionval+"</select>"
+  
+  $('#addafter').html(addafterhtml);
+  $('#addafter').show();
+  
+  
+  
+  }
+  
+    
+  
+  </script>
+  
+  <style>
+  .content {
+    border: 1px solid #000;
+    float: left;
+    margin: 5%;
+    padding: 5%;
+    width: 90%;
+}
+  .row input[type="radio"],
+  .row input[type="checkbox"]{
+  height:0px!important;
+  margin:4px 9px 7px!important;
+  width:20px!important;
+  }
+  .steps{margin:10px 0px;}
+  .step-heading{
+  font-size:16px;
+  font-weight:bold;
+  text-transform:uppercase;
+  padding:5px 10px;
+  background:#e2e2e2;
+  }
+  #formattributcontent .row input,
+  #formattributcontent .row select{width:95%;}
+  .right-inout {
+    float: left;
+    padding: 10px 0;
+    width: 95%;
+}
+  .delformrow{
+  float:right;
+  padding:10px 0px;
+  cursor: pointer;
+  font-weight:bold;
+  }
+  #new_attr3 .row{
+    padding: 0 10px;
+    width: 100%;
+  }
+  #formattributs .row{
+    padding: 0 10px;
+    width: 100%;
+  }
+  .row select,.row input{margin-bottom:0px;border: 1px solid #e5e5e5;}
+  .form .form-body {
+    float: left;
+    padding: 0 10px;
+    width: 100%;
+}
+  .row {
+  
+  margin-right: 0px !important; 
+  margin-left:  0px !important; 
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    display: inline;
+    line-height: normal;
+    margin: 0;
+    vertical-align: top;
+    width: 20px;
+}
+#content {
+    min-height: 200px;
+    width: 100%;
+}
+.btn-circle{
+margin-top:10px;
+}
+
+.page-content-wrapper .page-content {
+    float: left;
+    height: auto!important;
+    margin-left: 195px;
+    margin-top: 0;
+    min-height: 684px;
+    padding: 25px 20px 10px;
+  </style>
+
+
+
+
+

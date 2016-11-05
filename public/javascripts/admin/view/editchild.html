@@ -1,0 +1,247 @@
+
+<div class="row">
+<div class="col-md-12 ">
+          <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box green ">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Edit Child Page
+              </div>
+             
+            </div>
+            <div class="portlet-body form">
+
+              <form role="form" class="form-horizontal">
+                <div class="form-body">
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Parent</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="parentTitle"  ng-model="cpage.parentTitle">
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Title</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="childTitle"  ng-model="cpage.childTitle">
+                      
+                    </div>
+                  </div>
+
+                                
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Description</label>
+                    <div class="col-md-9">
+                      <div text-angular="text-angular" name="htmlcontent" ng-model="cpage.Sdesc" ></div>
+                    </div>
+                  </div>
+
+
+                  <!-- <div class="form-group">
+                    <label class="col-md-3 control-label">Short Description</label>
+                    <div class="col-md-9">
+                      <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ></div>
+                    </div>
+                  </div> -->
+                  
+                  <!-- <div class="form-group">
+
+                    <label class="col-md-3 control-label" for="exampleInputFile">Logo</label>
+                    <div class="col-md-9">
+                      <input type="file" name="file" file-Model="cd.file">
+                    </div>
+                  </div> -->
+                  
+                 
+                  <div class="form-group">
+                   
+                    <div class="col-md-9">
+                        <div class="abcd" style="margin-left:256px;">
+                        <input type="radio"  value="Active"  name="optionsRadios" ng-model="cpage.status"> Active<br> 
+                        <input type="radio"  value="Inactive"  name="optionsRadios" ng-model="cpage.status"> Inactive                    
+                       </div>
+                    </div>
+
+                  </div>
+                  
+
+                 
+              </div>
+
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" class="btn green" value="submit" ng-click="editChildsave(cpage._id)">
+                    <a class="btn default" href="#/childlist">Cancel</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+       </div>
+    </div>
+
+
+          
+<style type="text/css">
+    .ta-editor {
+  min-height: 200px;
+
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}
+</style>
+
+
+
+<!-- 
+
+<style>
+.form-text {
+    float: left;
+    width: 25%;
+}
+.form-box {
+    float: right;
+    width: 70%;
+}
+.form {
+    float: left;
+    width: 100%;
+     margin-bottom: 35px;
+}
+.form-box span {
+   float: left;
+   padding: 5px 15px 0 0;
+}
+.form-box input[type="radio"] {
+   float: left;
+   margin: 4px 8px 0 0;
+   width: auto;
+}
+</style>
+
+
+
+
+<style>
+.wrapper {
+    text-align: left;
+}
+body {
+    color: #333;
+    font: 14px/140% sans-serif;
+}
+</style>
+<div class="row">
+<div class="col-md-12">
+<form class="form-horizontal form-row-seperated" action="#">
+<div class="portlet light">
+    <div class="portlet-title">
+        <div class="caption">
+       
+            <span class="caption-subject font-green-sharp bold uppercase">
+            Edit Category </span>
+           
+        </div>
+
+        <div class="actions btn-set">
+            <a name="back" class="btn btn-default btn-circle" href="#/child1" class="fa fa-angle-left">Back</a>
+            <button class="btn green-haze btn-circle" ng-click="editChildsave()"><i class="fa fa-check"></i> Save</button>
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <div class="tabbable">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#tab_general" data-toggle="tab">
+                    General </a>
+                </li>                
+            </ul>
+        </div>
+
+    <div class="tab-content no-space">
+        <div class="tab-pane active" id="tab_general">
+
+            <div class="form-body">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Parent: <span class="required">
+                    * </span>
+                    </label>
+                    <div class="col-md-10">
+                   
+
+                        <input type="text" class="form-control" name="status" placeholder="" ng-model="vc.parents" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-body">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Title: <span class="required">
+                    * </span>
+                    </label>
+                    <div class="col-md-10">
+                        <input class="form-control" name="product[name]" placeholder="" ng-model="vc.title" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Status: <span class="required">
+                * </span>
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control" name="product[name]" placeholder="" ng-model="vc.status" type="text">
+                </div>
+            </div>
+
+
+
+
+
+
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Short Description: <span class="required">
+                    * </span>
+                    </label>
+                    <div class="col-md-10">
+                        <textarea id="richEditor" name="desc1" type="text" rows="5" cols="55" class="form-control" ng-model="vc.desc"></textarea>
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"> Description: <span class="required">
+                    * </span>
+                    </label>
+                    <div class="col-md-10">
+                        <textarea id="richEditor" name="desc1" type="text" rows="8" cols="80" class="form-control"  ng-model="vc.desc1"></textarea>
+                        
+                    </div>
+                </div>
+                                                  
+                                                    
+                                                 
+                                                    
+        </div>
+     </div>
+                                            
+                                           
+                                           
+</div>
+                                           
+</div>
+</form>
+</div>
+
+</div>
+ -->

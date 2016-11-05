@@ -1,0 +1,47 @@
+  <div class="row">
+    <div class="col-md-12">
+        
+            <!-- Begin fluid width widget -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-list-alt"></span> 
+                    </h3>
+                </div>
+                <div class="panel-body">
+                <ul class="media-list">
+                  <li class="media">
+                    <div class="media-body">
+                      <h2 class="media-heading">{{singleC.childTitle | uppercase}}</h2>                                          
+                         <div class="row">
+                         <div class="col-sm-4">           
+                            <img src="/childImage/{{singleC.file}}" alt="post img" style="width:235px; height:235px;" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                            </div>
+                            <div class="col-sm-8">            
+                            <p><big><u>Description:-</u></big><p class="margin-top-10 margin-bottom-20" ng-bind-html="singleC.Sdesc"></p></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                         <div class="col-sm-12">           
+                            <p><b><big>Parent-Page :</big></b>{{singleC.parentTitle}}</p>
+                            </div>
+                            <div class="col-sm-12">            
+                            <p><b><big>Current-Page :</big></b>{{singleC.childTitle}}</p>
+                            </div>
+                            <div class="col-sm-12">            
+                            <p><b><big>Status :</big></b><span style="background-color:yellow;">{{singleC.status}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+                    
+                </ul>
+                   
+                </div>
+            </div>
+            <!-- End fluid width widget -->
+            
+        </div>
+  </div>
+
+  

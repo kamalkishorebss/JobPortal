@@ -1,0 +1,89 @@
+{{candUser.mngr}}
+<div class="profile">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+           <a href="#/scheduler" >Create Schedule</a>
+
+        <A href="edit.html" ></A>
+       <br>
+<p class=" text-info"></p>
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+  
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{candUser.username}}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="/userdp/{{candUser.file}}" class="img-circle img-responsive" style="width:300px; height:200px;"> </div>
+              </div>
+                
+                <div class="row">
+                <div class=" col-md-12 col-lg-12 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{candUser.firstname}}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td>{{candUser.email}}</td>
+                      </tr>
+                      
+                       <tr>
+                        <td>City:</td>
+                        <td>{{candUser.city}}</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>Nationality:</td>
+                        <td>{{candUser.country}}</td>
+                      </tr>                        
+                           {{candUser.mngr}}
+                     
+                    </tbody>
+                  </table>
+                  
+              
+                </div>
+              </div>
+            </div>
+                 
+            
+          </div>
+          <div class="back">
+          <a href="#/candidatelist">Back</a></div>
+        </div>
+      </div>
+    </div>
+
+  <style type="text/css">
+  	.panel-info > .panel-heading {
+    background-color: #678095;
+    border-color: #bce8f1;
+    color: #fff;
+}
+.panel.panel-info {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-bottom: 50px;
+    width: 804px !important;
+}
+.col-lg-offset-3 {
+    margin-left: 10%;
+}
+.panel-footer {
+    display: none;
+}
+.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad {
+    width: 80%;
+}
+.back {
+    text-align: right;
+}
+
+  </style>

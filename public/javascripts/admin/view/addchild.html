@@ -1,0 +1,97 @@
+<div class="row">
+<div class="col-md-12 ">
+          <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box green ">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i> Add Child Page
+              </div>
+             
+            </div>
+            <div class="portlet-body form">
+
+              <form role="form" class="form-horizontal" name="myForm">
+                <div class="form-body">
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Select Option</label>
+                    <div class="col-md-9">
+                      <select class="form-control" name="titleParent" ng-model="titleParent">
+                        <option value="{{p.parentTitle}}"  ng-repeat="p in viewParents">{{p.parentTitle}}</option>
+                       
+                      </select>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Title</label>
+                    <div class="col-md-9">
+                      <input type="text" placeholder="Add child page tilte" class="form-control" ng-model="titleChild" name="titleChild">
+                      
+                    </div>
+                  </div>
+
+                   <!-- <div class="form-group">
+                    <label class="col-md-3 control-label">Short Description</label>
+                    <div class="col-md-9">
+                      <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ></div>
+                    </div>
+                  </div> -->             
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label">Description</label>
+                    <div class="col-md-9">
+                      <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ></div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" >Logo</label>
+                    <div class="col-md-9">
+                      <input type="file" name="file" file-Model="file">
+                    </div>
+                  </div>
+
+             
+                  <div class="form-group">
+                   
+                    <div class="col-md-9">
+                        <div class="abcd" style="margin-left:256px;">
+                        <input type="radio"  value="Active"  name="Radios" ng-model="radio"> Active<br> 
+                        <input type="radio"  value="Inactive"  name="Radios" ng-model="radio"> Inactive                    
+                       </div>
+                    </div>
+
+                  </div>
+                  
+
+                 
+              </div>
+
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <input type="submit" class="btn green" value="submit" ng-click="addChild()">
+                    <a class="btn default" href="#/childlist">Cancel</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+       </div>
+    </div>
+
+
+          
+<style type="text/css">
+    .ta-editor {
+  min-height: 200px;
+
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+}
+</style>

@@ -1,0 +1,62 @@
+
+<div class="container">
+  <div class="job-profile">
+      
+        <!-- BEGIN SIDEBAR & CONTENT -->
+        <div class="row margin-bottom-40">
+          <!-- BEGIN CONTENT -->
+          <div class="col-md-12 col-sm-12">
+            
+            <div class="content-page">
+              <div class="row margin-bottom-30">
+                                          
+
+                <!-- BEGIN PORTFOLIO DESCRIPTION -->            
+                <div class="col-md-12">
+                  <h2>{{jobreview.title}}</h2>
+                  {{jobreview._id}}
+                  <p><big>{{jobreview.company_id}}</big></p>
+                  
+                  <br>
+                  <div class="row front-lists-v2 margin-bottom-15">
+                    
+                    <div class="col-md-12">
+                     
+                        <p><b><big>Description:- </b><big>{{jobreview.description}}</p>
+                        <p><b>Expeirence Required:- </b>{{jobreview.experience}}</p>
+                        <p><b>Eligibilty:- </b>{{jobreview.qualification}}</p>
+                        
+                    </div>
+                  </div>
+                  </div>  
+                  <span><b><big>» Apply Now</b></big></span><br><br>
+                  <span>Please review all application instructions before applying to {{jobreview.company_id}}.</span><br><br>
+                
+                  <!-- <a href="javascript:;" class="btn btn-primary" > Apply Now</a> -->
+                  <input type="button"  class="btn btn-primary" ng-click="showForm(jobreview._id)" value="Apply Now"> 
+                </div>
+                <!-- END PORTFOLIO DESCRIPTION -->            
+              </div>
+
+             
+                
+                
+          </div>
+
+
+
+             </div>
+    </div>
+    <!-- END CONTENT -->
+  </div>
+        <!-- BEGIN SIDEBAR & CONTENT -->
+</div>
+
+<style>
+.content-page a, .sidebar2 a {
+    color: #ffffff;
+}
+.content-page a:hover, .sidebar2 a:hover {
+    color: #ffffff;
+}
+</style>

@@ -1,0 +1,73 @@
+<div class="candidatelist listings">
+<div class="row">
+
+          <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-globe"></i>Candidate Listing
+                </div>
+                <div class="tools">
+                </div>
+              </div>
+              <div class="portlet-body">
+              
+             <!--  <a class="btn btn-success" href="#/addcandidate" style="float:left">Add NEW</a> -->
+                <table class="table table-striped table-bordered table-hover" id="sample_1">
+                 <thead>
+                                       <tr>
+                                          <th>
+                                             Sr/No.
+                                          </th> 
+                                          <th>
+                                             Candidate Name
+                                          </th>
+                                          <th>
+                                             Company Name
+                                          </th>
+                                          
+                                          <th>
+                                             Job Title    
+                                          </th>
+                                          <th>
+                                             MangerEmail   
+                                          </th>
+                                          <th>
+                                             Action Perform
+                                          </th>
+                                         
+                                       </tr>
+                                    </thead>
+                <tbody>
+                       <tr ng-repeat="zz in candy">
+                         <td>
+                            {{$index+1}}
+                         </td>
+                         <td>
+                          {{zz.name}}
+                         </td>
+                         <td>
+                           {{zz.comp}}
+                         </td>
+                         <td>
+                           {{zz.job_title}}
+                         </td>
+                         <td>
+                           {{zz.mngr}}
+                         </td>
+                         <td>
+                          <!-- <a class="btn default btn-xs purple" ng-click="editCandidate(z._id)"><i class="fa fa-edit"></i> Edit</a> -->
+                  
+                         <a class="btn default btn-xs blue-stripe" ng-click="candidateprofile(zz._id)" ><i class="fa fa-view"></i> View</a>
+
+                         <a class="btn default btn-xs black" ng-click="deleteCandidate(zz._id)">
+                                          <i class="fa fa-trash-o"></i> Delete</a>
+                        </td>
+                       </tr>
+               </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+</div>

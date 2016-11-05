@@ -1,0 +1,152 @@
+<div class="portlet box blue-hoki">
+<div class="portlet-title">
+<div class="caption">
+<i class="fa fa-gift"></i>Edit schedule
+<span style="margin-left:600px; font-size:28px;">{{singles.username}}</span>
+</div>
+
+</div>
+<div class="portlet-body form">
+
+
+    <form id="signupform" class="form-horizontal" role="form" name="myForm" novalidate>
+     
+    
+           
+        <div class="form-body">
+
+ 
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Task</label>
+                <div class="col-md-4">
+                    <textarea type="text" class="form-control" name="tasks" ng-model="singles.tasks"></textarea> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Select-Date</label>
+                
+                    <md-content>
+                       
+                      <md-datepicker name="date" ng-model="singles.myDate1" md-placeholder="Select-date">                 
+                           </md-datepicker>
+                                  
+                    </md-content>
+                
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Select Day</label>
+                
+                  <div class="col-md-4">
+               
+                 <select ng-model="singles.day" name="day" class="form-control">   
+                    <option value="">Choose</option>                 
+                    <option ng-selected="singles.day == 'Sun'" value="Sun">Sunday</option>
+                    <option ng-selected="singles.day == 'Mon'" value="Mon">Monday</option>
+                    <option ng-selected="singles.day == 'Tue'" value="Tue">Tuesday</option>
+                    <option ng-selected="singles.day == 'wed'" value="wed">Wedensday</option>
+                    <option ng-selected="singles.day == 'thus'" value="thus">Thursday</option>
+                    <option ng-selected="singles.day == 'Fri'" value="Fri">Friday</option>
+                    <option ng-selected="singles.day == 'Sat'" value="Sat">Saturday</option>
+                </select>
+               
+            </div>
+            </div>
+            
+            <div class="form-group">             
+             <label class="col-md-3 control-label">From</label>
+             <div class="col-md-4">
+               
+                  <select ng-model="singles.stime" name="stime" class="form-control">
+                    <option value="">Choose</option>
+                    <option ng-selected="singles.stime == '1:00'"  value="1:00">1:00</option>
+                    <option ng-selected="singles.stime == '2:00'"  value="2:00">2:00</option>
+                    <option ng-selected="singles.stime == '3:00'"  value="3:00">3:00</option>
+                    <option ng-selected="singles.stime == '4:00'"  value="4:00">4:00</option>
+                    <option ng-selected="singles.stime == '5:00'"  value="5:00">5:00</option>
+                    <option ng-selected="singles.stime == '6:00'"  value="6:00">6:00</option>
+                    <option ng-selected="singles.stime == '7:00'"  value="7:00">7:00</option>
+                    <option ng-selected="singles.stime == '8:00'"  value="8:00">8:00</option>
+                    <option ng-selected="singles.stime == '9:00'"  value="9:00">9:00</option>
+                    <option ng-selected="singles.stime == '10:00'" value="10:00">10:00</option>
+                    <option ng-selected="singles.stime == '11:00'" value="11:00">11:00</option>
+                    <option ng-selected="singles.stime == '12:00'" value="12:00">12:00</option>
+                    <option ng-selected="singles.stime == '13:00'" value="13:00">13:00</option>
+                    <option ng-selected="singles.stime == '14:00'" value="14:00">14:00</option>
+                    <option ng-selected="singles.stime == '15:00'" value="15:00">15:00</option>
+                    <option ng-selected="singles.stime == '16:00'" value="16:00">16:00</option>
+                    <option ng-selected="singles.stime == '17:00'" value="17:00">17:00</option>
+                    <option ng-selected="singles.stime == '18:00'" value="18:00">18:00</option>
+                    <option ng-selected="singles.stime == '19:00'" value="19:00">19:00</option>
+                    <option ng-selected="singles.stime == '20:00'" value="20:00">20:00</option>
+                    <option ng-selected="singles.stime == '21:00'" value="21:00">21:00</option>
+                    <option ng-selected="singles.stime == '22:00'" value="22:00">22:00</option>
+                    <option ng-selected="singles.stime == '23:00'" value="23:00">23:00</option>                    
+                  </select>
+                
+            </div>
+            </div>
+
+           
+            
+
+            <div class="form-group">             
+             <label class="col-md-3 control-label">To</label>
+             <div class="col-md-4">
+                <select ng-model="singles.etime" name="etime" class="form-control">
+                    <option value="">Choose</option>
+                    <option ng-selected="singles.etime == '1:00'"  value="1:00">1:00</option>
+                    <option ng-selected="singles.etime == '2:00'"  value="2:00">2:00</option>
+                    <option ng-selected="singles.etime == '3:00'"  value="3:00">3:00</option>
+                    <option ng-selected="singles.etime == '4:00'"  value="4:00">4:00</option>
+                    <option ng-selected="singles.etime == '5:00'"  value="5:00">5:00</option>
+                    <option ng-selected="singles.etime == '6:00'"  value="6:00">6:00</option>
+                    <option ng-selected="singles.etime == '7:00'"  value="7:00">7:00</option>
+                    <option ng-selected="singles.etime == '8:00'"  value="8:00">8:00</option>
+                    <option ng-selected="singles.etime == '9:00'"  value="9:00">9:00</option>
+                    <option ng-selected="singles.etime == '10:00'" value="10:00">10:00</option>
+                    <option ng-selected="singles.etime == '11:00'" value="11:00">11:00</option>
+                    <option ng-selected="singles.etime == '12:00'" value="12:00">12:00</option>
+                    <option ng-selected="singles.etime == '13:00'" value="13:00">13:00</option>
+                    <option ng-selected="singles.etime == '14:00'" value="14:00">14:00</option>
+                    <option ng-selected="singles.etime == '15:00'" value="15:00">15:00</option>
+                    <option ng-selected="singles.etime == '16:00'" value="16:00">16:00</option>
+                    <option ng-selected="singles.etime == '17:00'" value="17:00">17:00</option>
+                    <option ng-selected="singles.etime == '18:00'" value="18:00">18:00</option>
+                    <option ng-selected="singles.etime == '19:00'" value="19:00">19:00</option>
+                    <option ng-selected="singles.etime == '20:00'" value="20:00">20:00</option>
+                    <option ng-selected="singles.etime == '21:00'" value="21:00">21:00</option>
+                    <option ng-selected="singles.etime == '22:00'" value="22:00">22:00</option>
+                    <option ng-selected="singles.etime == '23:00'" value="23:00">23:00</option>                                   
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Shift</label>
+                <div class="col-md-4">
+                <div class="xyz" style="margin-left:70px;">
+                <input type="radio"  value="IST"  name="Radios" ng-model="singles.shift"> IST 
+                <input type="radio"  value="PST"  name="Radios" ng-model="singles.shift"> PST
+                </div>
+            </div>
+
+           <input type="hidden" ng-model="candUser.username" name="username">
+           <input type="hidden" ng-model="candUser._id" name="userid">
+        
+          </div>
+
+        <div class="row form-actions">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" class="btn btn-success btn green" value="Submit" ng-click="editSchedulesave(singles._id)">
+                <!-- <a class="btn btn-success btn default" href="#/reviewlist">Cancel</a> -->
+            </div>
+        </div>
+    </form>
+    
+</div>
+
+</div>                                  
+

@@ -1,0 +1,92 @@
+
+    <div class="row">     
+       <div class="col-md-7 ">
+
+<div class="panel panel-default">
+  <div class="panel-heading">  <h4 >Admin Profile</h4></div>
+   <div class="panel-body" ng-repeat="ad in admindp">
+      
+    <div class="box box-info">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <img src="/admin/{{ad.file}}" id="profile-image1" class="img-circle img-responsive">
+
+                     
+                     </div>
+              
+              <br>
+    
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1; font-size:24px;">{{ad.username}} </h4></span>
+              <!-- <span><p>Aspirant</p></span> -->            
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+    
+              
+<div class="col-sm-5 col-xs-6 tital ">Name:</div><div class="col-sm-7 col-xs-6 ">{{ad.name}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Email Address:</div><div class="col-sm-7"> {{ad.email}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital ">Location:</div><div class="col-sm-7">{{ad.location}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital ">Address:</div><div class="col-sm-7">{{ad.address}}</div>
+
+
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+       
+        <!-- <div class="panel-heading"> <a href="#/editdp" ><h4 >Edit</h4></a></div> -->    
+    </div> 
+    </div>
+ 
+   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   </div>
+</div>
+
+<style type="text/css">
+    input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+.col-md-7 {
+    margin-top:30px;
+    width: 100%;
+}
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 200px;
+    height: 190px;
+    border:2px solid #03b1ce ;}
+    .tital{ font-size:16px; font-weight:500;}
+     .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0} 
+
+    .panel panel-default{
+       
+    }    
+</style>

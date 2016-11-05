@@ -1,0 +1,144 @@
+<div class="container">
+    <div class="row">     
+       <div class="col-md-7 ">
+
+<div class="panel panel-default">
+  <div class="panel-heading">  <h4 >User Profile</h4></div>
+   <div class="panel-body">
+       
+    <div class="box box-info">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <img src="/userdp/{{loggedIn.file}}" id="profile-image1" class="img-circle img-responsive">                  
+                     
+                     </div>
+              
+              <br>
+    
+              <!-- /input-group -->
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">{{loggedIn.username}} </h4></span>
+              <!-- <span><p>Aspirant</p></span> -->            
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+    
+              
+<div class="col-sm-5 col-xs-6 tital " >Name:</div><div class="col-sm-7 col-xs-6 ">{{loggedIn.firstname}}</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Email Address:</div><div class="col-sm-7"> {{loggedIn.email}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital ">City:</div><div class="col-sm-7">{{loggedIn.city}}</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital ">Nationality:</div><div class="col-sm-7">{{loggedIn.country}}</div>
+
+
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+       
+        <div class="panel-heading"> <a href="#/editdp" ><h4 >Edit</h4></a></div>    
+    </div> 
+    </div>
+</div>  
+   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   </div>
+</div>
+
+<style type="text/css">
+    input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+.col-md-7 {
+    margin-left: 220px;
+    width: 70.333%;
+}
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 200px;
+    height: 190px;
+    border:2px solid #03b1ce ;}
+    .tital{ font-size:16px; font-weight:500;}
+     .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}    
+</style>
+
+<!-- 
+<div class="container"> 
+
+  <div class="row">                    
+    <div class="col-md-12">
+      <img  src="../uploads/{{loggedIn.file}}" alt="post img" width="304" height="236" class="img-rounded" >
+    </div>
+  </div>
+
+
+  <div class="row">                    
+    <div class="col-md-12">
+     
+      <ul class="blog-info">
+        <li>{{loggedIn.username}}</li>
+        <li><big>Email:- </big>{{loggedIn.email}}</li>
+        <li><big>City:- </big>{{loggedIn.city}}</li>
+        <li><big>Country:- </big>{{loggedIn.country}}</li>
+      </ul>
+    </div>
+  </div>
+                  
+                 
+</div>
+          -->
+
+<!-- <br><br>
+<div class="container">
+	<div class="row">
+    <div class="col-md-12">
+        <div class="span2" >
+		    <img src="/uploads/{{loggedIn.file}}" class="img-circle">
+        </div>
+        
+        <div class="span8">
+            <h3>{{loggedIn.username}}</h3>
+            <h6><big>Email Address:- </big>{{loggedIn.email}}</h6>
+            <h6><big>City:- </big>{{loggedIn.city}}</h6>
+            <h6><big>Country:- </big>{{loggedIn.country}}</h6>
+        </div>
+        
+        <div class="span2">
+            <div class="btn-group">
+                <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                    Action 
+                    <span class="icon-cog icon-white"></span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><span class="icon-wrench"></span> Edit</a></li>
+                    <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                </ul>
+            </div>
+        </div>
+  </div>
+</div>
+</div> -->

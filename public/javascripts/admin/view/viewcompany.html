@@ -1,0 +1,20 @@
+<h1>Compnay Profile</h1>
+<hr>
+<div class="container" style="width:100%;">
+   <div id="blog" class="row" style="width:100%;">              
+                 <div class="col-md-10 fluid" style="float:left; width:30%;">           
+                     <h1>{{info.name}}</h1>
+                     <img src="/uploads/{{info.file}}" alt="post img" style="width:235px; height:235px;" class="pull-left img-responsive thumb margin10 img-thumbnail">                             
+                 </div>
+                  <div class="col-md-10 fluid1" style=" width:30%;">    
+                     <p style="margin-top:30%;"><b>Company Manger:- </b>{{info.manger | uppercase}}</p>            
+                     <p><b>Email:</b>{{info.email}}</p>
+                     <p><b>Address:</b>{{info.address}}</p>
+                     <p><b>Location:</b>{{info.location}}</p>
+                 </div>
+                 <div class="col-md-10 fluid1" style=" width:100%;">         
+                     <p style="margin-top:5%;" ng-bind-html="info.discription"><b>Description:</b>{{info.discription}}</p>                
+                 </div>            
+     </div>
+</div>
+<a class="btn btn-success" href="#/addjob">Post Job</a>

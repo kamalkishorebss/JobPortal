@@ -1,0 +1,41 @@
+<a class="btn btn-success" href="#/content">AddNew</a>
+<div class="row">
+<div class="col-lg-2">     
+        </div>
+          <div class="col-lg-8">
+          <h3>User List</h3>
+        </div>
+<input ng-model="x.username" placeholder="Search">Search</input>
+         <div class="col-lg-2">
+        </div>
+        </div>
+<div class="row text-center">
+            <div class="col-md-2 col-sm-8 hero-feature">             
+            </div>
+<div class="col-md-8 col-sm-8 hero-feature">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>S/No.</th>
+        <th>User Name</th>
+        <th>Address </th>
+        <th>Email</th>
+        <th>View</th>
+        <th>Update</th>      
+      </tr>
+    </thead>
+<tbody style="text-align: left;">
+      <tr ng-repeat="x in user1 | filter:x">
+        <td>{{$index+1}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.address}}</td>
+        <td>{{x.email}}</td>
+        <td><input  type="button" class="btn btn-success" value="view" ng-click="viewProfile(x._id)"></td>
+        <td><input type="button" class="btn btn-success" value="update" ng-click="editProfile(x._id)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-md-2 col-sm-8 hero-feature">          
+</div>         
+</div>

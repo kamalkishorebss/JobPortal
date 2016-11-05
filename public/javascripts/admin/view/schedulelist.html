@@ -1,0 +1,90 @@
+<div class="Schedule list">
+<div class="row">
+
+          <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet box blue-hoki">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-globe"></i>Schedule list
+                </div>
+                <div class="tools">
+                </div>
+              </div>
+              <div class="portlet-body">
+                      
+                <table class="table table-striped table-bordered table-hover" id="sample_1">
+                 <thead>
+                                       <tr>
+                                            <th>
+                                               Sr/No.
+                                            </th> 
+                                            <th>
+                                                Employee Name
+                                            </th>
+                                            <th>
+                                                Task
+                                            </th>                                             
+                                            <th>
+                                                Day
+                                            </th>
+                                            <th>
+                                                From
+                                            </th>                                            
+                                            <th>
+                                                To
+                                            </th>
+                                            <th>
+                                                Date
+                                            </th>
+                                            <th>
+                                                Shift
+                                            </th>
+                                            <th>
+                                                Action Preform
+                                            </th>
+                        
+                                       </tr>
+                  </thead>
+                <tbody>
+                       <tr ng-repeat="sl in schedule">
+                         <td>
+                            {{$index+1}}
+                         </td>
+                         <td>
+                           {{sl.username}}
+                         </td>
+                         <td>
+                           {{sl.tasks}}
+                         </td>
+                         <td>
+                           {{sl.day}}
+                         </td>
+                         <td>
+                           {{sl.stime}}
+                         </td>
+                         <td>
+                           {{sl.etime}}
+                         </td>
+                         <td>
+                           {{sl.date}}
+                         </td>
+                         <td>
+                           {{sl.shift}}
+                         </td>
+
+                         <td>
+                          <a class="btn default btn-xs purple" ng-click="editSchedule(sl._id)"><i class="fa fa-edit"></i> Edit</a>
+                  
+                         <!-- <a class="btn default btn-xs blue-stripe" ng-click="viewAdmin(l._id)" ><i class="fa fa-view"></i> View</a> -->
+
+                         <a class="btn default btn-xs black" ng-click="deleteShift(sl._id)">
+                                          <i class="fa fa-trash-o"></i> Delete</a>
+                        </td>
+                       </tr>
+               </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<h1>User Profile Page</h1>
+<hr>
+<div class="container" style="width:100%;">
+<div id="blog" class="row" style="width:100%;"> 
+<div class="col-md-10 fluid" style="width:30%;">
+</div>
+          
+<h1>{{info1.username}}</h1>
+ 
+ <object data="/uploads/{{info.file}}"  height="300" width="300" type="application/pdf">
+alt : <a href="{{info.file}}">{{info.file}} </a>
+                 </object> 
+                  
+
+
+
+
+<div class="col-md-10 fluid1" style=" width:30%;">
+<p style="margin-top:30%;float:left; width:30%;">
+<p><b>Name:</b>{{info1.username}}</p>
+<p><b>Address:</b>{{info1.address}}</p>
+<p><b>Email:</b>{{info1.email}}</p>
+    </div>
+    <div class="col-md-10 fluid1" style=" width:100%;">             
+    </div>                 
+</div>
+</div>
+<a class="btn btn-success" href="#/job">Post User</a>

@@ -1,0 +1,75 @@
+<!-- <h1>this is application form</h1> --> 
+<div class="container">
+<div class="row">
+<div class="col-md-12 ">
+          <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="portlet box green ">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i> Job application form
+              </div>
+             
+            </div>
+            <div class="portlet-body form">
+
+              <form role="form" class="form-horizontal">
+                <div class="form-body" ng-bind-html="frm" id="frmid" name="div1">
+ 
+                  
+
+                  
+                 
+               </div> 
+
+               <input type="hidden" name="user" ng-model="$scope.loggedIn">
+               <input type="hidden" name="comp" ng-model="$scope.comp">
+               <input type="hidden" name="name" ng-model="$scope.username">
+               <input type="hidden" name="mangerName" ng-model="$scope.companyManger">
+
+               <input type="hidden" name="farm" >
+               {{companyManger}}
+                <div class="form-actions fluid">
+                  <div class="col-md-offset-3 col-md-9">
+                    <input id="btn" type="submit" class="btn green" value="Save" ng-click="saveUser()">
+                    
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+       </div>
+    </div>
+    </div>
+
+<script type="text/javascript">
+  
+ $( document ).ready(function() {
+   
+   var saveForm = $("#frmid").html();
+   
+});
+   
+
+
+
+ 
+
+</script>
+
+ <style type="text/css">
+ 	.form .form-body {
+    padding: 20px;
+}
+
+#frmid .delformrow {
+    display: none;
+}
+#frmid .step-heading {
+    display: none;
+}
+.col-md-12 {
+    margin-left: 128px;
+    width: 80%;
+}
+ </style>

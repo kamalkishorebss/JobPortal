@@ -1,0 +1,116 @@
+<div class="job-profile">
+      <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+          
+
+
+      
+
+      </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Job Information</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td><big><b>Job Profile:</b></big></td>
+                        <td>{{detail.title}}</td>
+                      </tr>
+                      
+                     <tr>
+                        <td><big><b>Age:</b></big></td>
+                        <td>{{detail.age}}</td>
+                      </tr>
+
+                      <tr>
+                        <td><big><b>Location:</b></big></td>
+                        <td>{{detail.location}}</td>
+                      </tr>
+                   
+                       <tr>
+                        <td><big><b>Address:</b></big></td>
+                        <td>{{detail.address}}</td>
+                      </tr>
+                          
+
+	                       <tr>
+	                        <td><big><b>Salary:</b></big></td>
+	                        <td>{{detail.salary}}</td>
+	                       </tr>
+	                       
+	                     
+		                      <tr>
+		                        <td><big><b>Qualification:</b></big></td>
+		                        <td>{{detail.qualification}}</td>
+			                   </tr>
+	                        
+                          <tr>   
+	                            <td><big><b>Description:</b></big></td>
+		                          <td ng-bind-html="detail.description">{{detail.description}}</td>
+	                       </tr>
+                           
+                          <tr>
+                            <td><big><b>Experience:</b></big></td>
+                            <td>{{detail.experience}}</td>
+                         </tr>                                        
+                         
+                     
+                    </tbody>
+                  </table>
+                 
+                </div>
+              </div>
+            </div>
+                        
+            
+          </div>
+
+          
+
+          <div class="back">
+          <a style="float:left;" href="#/applicationform">View Application Form</a>
+          <a style="float:right; margin-left:500px;" href="#/joblist">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <style type="text/css">
+  	.panel-info > .panel-heading {
+    background-color: #678095;
+    border-color: #bce8f1;
+    color: #fff;
+}
+.panel.panel-info {
+    display: block !important;
+    margin-left: -100px;
+    margin-right: auto !important;
+    padding-bottom: 84px;
+    width: 1001px !important;
+}
+.col-lg-offset-3 {
+    margin-left: 10%;
+}
+.panel-footer {
+    display: none;
+}
+.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad {
+    width: 80%;
+}
+.back {
+    text-align: right;
+}
+
+.col-lg-9 {
+    padding-top: 34px;
+    width: 100%;
+}
+  </style>
+ 

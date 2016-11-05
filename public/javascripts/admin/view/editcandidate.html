@@ -1,0 +1,136 @@
+
+<div class="portlet box blue-hoki">
+<div class="portlet-title">
+<div class="caption">
+<i class="fa fa-gift"></i>Edit Candidate 
+</div>
+
+</div>
+<div class="portlet-body form">
+<!-- BEGIN FORM-->
+  <form id="signupform" class="form-horizontal" role="form" name="myForm" novalidate>
+    
+    <div class="form-body">
+      <div class="form-group">
+        <label class="col-md-3 control-label">Username</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="username" ng-model="candidate.username"  >
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">First Name</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="firstname" ng-model="candidate.firstname" >
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Last Name</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="lastname" ng-model="candidate.lastname" >
+
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Email</label>
+        <div class="col-md-4">
+          <input type="email" class="form-control" name="email" ng-model="candidate.email" >
+
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Phone</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="phone" ng-model="candidate.phone">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Age</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="age" ng-model="candidate.age" >
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Address</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="address" ng-model="candidate.address">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">City</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="city" ng-model="candidate.city">
+
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">State</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="state" ng-model="candidate.state">
+
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Country</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="country" ng-model="candidate.country">
+
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-3 control-label">Experience</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="experience" ng-model="candidate.experience">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Qualification</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="qualification" ng-model="candidate.qualification">
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label">Business</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="business" ng-model="candidate.business">
+
+        </div>
+      </div>
+
+      
+        
+    </div> <!--end form body--> 
+
+    <div class="row form-actions">
+      <div class="col-md-offset-3 col-md-9">
+        <input type="submit" class="btn btn-success btn green" value="Submit" ng-click="saveCandidate(candidate._id)">
+        <!-- <a class="btn btn-success btn default" href="#/companylist">Cancel</a> -->
+      </div>
+    </div>
+  </form>
+  <!-- END FORM-->
+</div>
+</div>                  
