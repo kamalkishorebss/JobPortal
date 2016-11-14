@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- END PAGE SPINNER -->
 
 	<!-- BEGIN HEADER -->
-	<div ng-hide="checkadmin"  ng-include="'/javascripts/admin/view/header.html'"  class="page-header navbar navbar-fixed-top">
+	<div ng-if="loginCheck()"  ng-include="'/javascripts/admin/view/header.html'"  class="page-header navbar navbar-fixed-top">
 	</div>
 	<!-- END HEADER -->
 
@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="container">
 		<div class="page-container">
 			<!-- BEGIN SIDEBAR -->
-			<div ng-hide="checkadmin" ng-include="'/javascripts/admin/view/sidebar.html'"  class="page-sidebar-wrapper">			
+			<div ng-if="loginCheck()" ng-include="'/javascripts/admin/view/sidebar.html'"  class="page-sidebar-wrapper">			
 			</div>
 			<!-- END SIDEBAR -->
 			<div  class="page-content-wrapper">
@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 		</div>
 		<!-- BEGIN FOOTER -->
-		<div ng-hide="checkadmin" ng-include="'/javascripts/admin/view/footer.html'"  class="page-footer">
+		<div ng-if="loginCheck()" ng-include="'/javascripts/admin/view/footer.html'"  class="page-footer">
 		</div>
 		<!-- END FOOTER -->
 	</div>

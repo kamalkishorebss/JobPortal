@@ -1,7 +1,7 @@
 //admincontroller***************////////
 jobPortal.controller("jobCtrl",function($scope,NgTableParams,$http,$location,$localStorage,$sce,$route,notificationMessage,$window){
 
-$scope.checkadmin = false;
+//$scope.checkadmin = false;
  
 $scope.data    = $localStorage.dd;
 $scope.detail  = $localStorage.jobDetail;
@@ -1730,7 +1730,7 @@ $scope.loginAdmin = function()
 
 }
 
-/*//**login check
+//**login check
 $scope.loginCheck = function()
 {
  $scope.user_type = $localStorage.type;
@@ -1742,12 +1742,12 @@ $scope.loginCheck = function()
 
  return false;
 
-}*/
+}
 
 
 
 $scope.logoutAdmin=function(){
- $scope.checkadmin = true;
+ //$scope.checkadmin = true;
  
         $http({
             method:'get',
